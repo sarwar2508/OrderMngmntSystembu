@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8f3787c4-8adc-48d7-acee-b90852dac2a5": {
+      "ProjectGuid": "8f3787c4-8adc-48d7-acee-b90852dac2a5",
+      "DisplayName": "OrderMngmntSystemServiceLayer",
+      "ColorIndex": 0
+    },
+    "962514ce-af49-46fe-af0d-3c7f2ac708a3": {
+      "ProjectGuid": "962514ce-af49-46fe-af0d-3c7f2ac708a3",
+      "DisplayName": "OrderMngmntRepositoryLayer",
+      "ColorIndex": 1
+    },
+    "ea6c5712-a612-4493-a390-d07d27b56ada": {
+      "ProjectGuid": "ea6c5712-a612-4493-a390-d07d27b56ada",
+      "DisplayName": "OrderMngmntSystem",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
