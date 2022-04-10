@@ -86,15 +86,16 @@ namespace OrderMngmntSystem.Controllers
             return BadRequest();
         }
 
-        public async Task<ActionResult> GetProductSellingHistory(int ProductId)
+        public async Task<ActionResult> AddCustomer(Customer customer)
         {
+
             try
             {
-                _logger.LogInformation("Product -DetailsById endpoint called");
-                if (ProductId != 0)
+                _logger.LogInformation("Customer -AddCustomer endpoint called");
+                if (customer != null)
                 {
-                    var res = await _productOperations.GetProductName(ProductId);
-                    return Ok(res);
+                    await _productOperations.AddCustomer(customer);
+                    return Ok(customer);
                 }
             }
             catch (Exception ex)
@@ -102,8 +103,10 @@ namespace OrderMngmntSystem.Controllers
                 _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
 
             }
-            return NotFound();
+            return BadRequest();
         }
+
+
 
         //public async Task<ActionResult> SearchOrderProducts(int OrderId)
         //{
