@@ -12,6 +12,8 @@ namespace OrderMngmntSystem.Infrastructure
     {
         Task<IList<ProductService>> GetProductDetails();
 
+        Task<IList<Customer>> GetCustomerDetails();
+
         //ProductService GetByCategory(string catg);
 
         Task DeleteProductCategory(ProductService product);

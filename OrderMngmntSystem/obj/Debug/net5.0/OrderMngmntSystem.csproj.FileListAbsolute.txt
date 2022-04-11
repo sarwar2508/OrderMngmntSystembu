@@ -438,3 +438,5 @@ C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\zh-Hant\Mi
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Customer\AddProduct.cshtml.g.cs
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\AdminPage.cshtml.g.cs
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\GetCustomerDetails.cshtml.g.cs

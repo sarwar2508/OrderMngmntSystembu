@@ -23,6 +23,10 @@ namespace OrderMngmntSystem.Controllers
         {
             return View();
         }
+        public IActionResult AdminPage()
+        {
+            return View();
+        }
         public async Task<ActionResult> GetProductDetails()
         {
             var products = await _productOperations.GetProductDetails();
@@ -43,9 +47,30 @@ namespace OrderMngmntSystem.Controllers
             return View(products);
 
 
-        }
+        }  //done
+        public async Task<ActionResult> GetCustomerDetails()
+        {
+            var customers = await _productOperations.GetCustomerDetails();
 
-        public async Task<ActionResult> DeleteCategory(ProductService product)
+            try
+            {
+                _logger.LogInformation("Customer -GetCustomerDetails endpoint called");
+
+                if (customers == null)
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
+            }
+            return View(customers);
+
+
+        } //done
+
+        public async Task<ActionResult> DeleteProduct(ProductService product)
         {
             try
             {
@@ -66,25 +91,25 @@ namespace OrderMngmntSystem.Controllers
         }
        
 
-        public async Task<ActionResult> AddCustomer(Customer customer)
-        {
+        //public async Task<ActionResult> AddCustomer(Customer customer)
+        //{
 
-            try
-            {
-                _logger.LogInformation("Customer -AddCustomer endpoint called");
-                if (customer != null)
-                {
-                    await _productOperations.AddCustomer(customer);
-                    return Ok(customer);
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
+        //    try
+        //    {
+        //        _logger.LogInformation("Customer -AddCustomer endpoint called");
+        //        if (customer != null)
+        //        {
+        //            await _productOperations.AddCustomer(customer);
+        //            return Ok(customer);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
 
-            }
-            return BadRequest();
-        }
+        //    }
+        //    return BadRequest();
+        //}
 
 
 

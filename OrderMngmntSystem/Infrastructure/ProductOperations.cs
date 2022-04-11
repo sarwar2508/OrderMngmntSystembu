@@ -57,5 +57,11 @@ namespace OrderMngmntSystem.Infrastructure
             _productContext.Add<ProductService>(product);
             await _productContext.SaveChangesAsync();
         }
+
+        public async Task<IList<Customer>> GetCustomerDetails()
+        {
+            await Task.Delay(1000);
+            return _productContext.Set<Customer>().ToList();
+        }
     }
 }

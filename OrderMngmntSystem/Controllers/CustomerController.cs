@@ -125,7 +125,7 @@ namespace OrderMngmntSystem.Controllers
             }
            
             return BadRequest();
-        }
+        }  //done
         public async Task<ActionResult> SearchOrderProducts(int OrderId)
         {
             try
@@ -147,7 +147,7 @@ namespace OrderMngmntSystem.Controllers
         }
        
 
-        public async Task<ActionResult> GetProductSellingHistory(int ProductId)
+        public async Task<ActionResult> GetProductbyId(int ProductId)
         {
             try
             {
