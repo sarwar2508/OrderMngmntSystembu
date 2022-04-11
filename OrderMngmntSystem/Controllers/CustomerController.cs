@@ -21,7 +21,7 @@ namespace OrderMngmntSystem.Controllers
             _logger.LogInformation("Customer Called");
             _productOperations = productOperations;
         }
-        
+
 
         //public async Task<ActionResult> GetProductDetails()
         //{
@@ -98,7 +98,31 @@ namespace OrderMngmntSystem.Controllers
         //    return NotFound();
 
         //}
-        
+
+        public IActionResult AddProduct()
+        {
+            return View();
+        }
+
+        public async Task<ActionResult> AddProduct(ProductService prod)
+        {
+            try
+            {
+                _logger.LogInformation("Product -AddProduct endpoint called");
+                if (prod != null)
+                {
+                    await _productOperations.AddProduct(prod);
+                    return View(prod);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
+
+            }
+            return BadRequest();
+        }
         public async Task<ActionResult> SearchOrderProducts(int OrderId)
         {
             try

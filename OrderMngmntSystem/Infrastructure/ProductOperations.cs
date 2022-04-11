@@ -51,10 +51,10 @@ namespace OrderMngmntSystem.Infrastructure
         {
             return await _productContext.FindAsync<ProductService>(productId);
         }
-        public async Task AddProduct(ProductService prod)
+        public async Task AddProduct(ProductService product)
         {
 
-            _productContext.Add<ProductService>(prod);
+            _productContext.Add<ProductService>(product);
             await _productContext.SaveChangesAsync();
         }
     }

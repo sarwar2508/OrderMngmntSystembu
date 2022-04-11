@@ -45,7 +45,6 @@ namespace OrderMngmntSystem.Controllers
 
         }
 
-       
         public async Task<ActionResult> DeleteCategory(ProductService product)
         {
             try
@@ -65,26 +64,7 @@ namespace OrderMngmntSystem.Controllers
             return NotFound();
 
         }
-
-        public async Task<ActionResult> AddProduct(ProductService prod)
-        {
-            try
-            {
-                _logger.LogInformation("Product -AddProduct endpoint called");
-                if (prod != null)
-                {
-                    await _productOperations.AddProduct(prod);
-                    return Ok(prod);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
-
-            }
-            return BadRequest();
-        }
+       
 
         public async Task<ActionResult> AddCustomer(Customer customer)
         {
@@ -105,6 +85,8 @@ namespace OrderMngmntSystem.Controllers
             }
             return BadRequest();
         }
+
+
 
 
 
