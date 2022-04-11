@@ -440,3 +440,4 @@ C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\runtimes\w
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Customer\AddProduct.cshtml.g.cs
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\AdminPage.cshtml.g.cs
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\GetCustomerDetails.cshtml.g.cs
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\DeleteProduct.cshtml.g.cs

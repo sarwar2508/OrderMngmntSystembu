@@ -27,6 +27,10 @@ namespace OrderMngmntSystem.Controllers
         {
             return View();
         }
+        public ActionResult DeleteProduct()
+        {
+            return View();
+        }
         public async Task<ActionResult> GetProductDetails()
         {
             var products = await _productOperations.GetProductDetails();
@@ -47,7 +51,7 @@ namespace OrderMngmntSystem.Controllers
             return View(products);
 
 
-        }  //done
+        }  
         public async Task<ActionResult> GetCustomerDetails()
         {
             var customers = await _productOperations.GetCustomerDetails();
@@ -68,8 +72,9 @@ namespace OrderMngmntSystem.Controllers
             return View(customers);
 
 
-        } //done
+        } 
 
+        [HttpPost]
         public async Task<ActionResult> DeleteProduct(ProductService product)
         {
             try
@@ -78,7 +83,9 @@ namespace OrderMngmntSystem.Controllers
                 if (product != null)
                 {
                     await _productOperations.DeleteProductCategory(product);
-                    return Ok(product);
+                    ViewBag.Message = string.Format("Product Deleted Successfully");
+                    
+                    return View(product);
                 }
             }
             catch (Exception ex)

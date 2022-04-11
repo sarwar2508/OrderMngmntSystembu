@@ -113,7 +113,7 @@ namespace OrderMngmntSystem.Controllers
                 if (prod != null)
                 {
                     await _productOperations.AddProduct(prod);
-                    ViewBag.Message = string.Format("Customer Added Successfully");
+                    ViewBag.Message = string.Format("Product Added Successfully");
                     return View(prod);
                 }
 
@@ -125,7 +125,7 @@ namespace OrderMngmntSystem.Controllers
             }
            
             return BadRequest();
-        }  //done
+        }  
         public async Task<ActionResult> SearchOrderProducts(int OrderId)
         {
             try

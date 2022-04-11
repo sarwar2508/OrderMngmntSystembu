@@ -18,8 +18,8 @@ namespace OrderMngmntSystem.Infrastructure
 
         public async Task DeleteProductCategory(ProductService product)
         {
-
-            _productContext.Remove<ProductService>(product);
+            
+            _productContext.Remove(product);
             await _productContext.SaveChangesAsync();
 
         }

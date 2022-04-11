@@ -1,0 +1,56 @@
+﻿@model OrderMngmntSystem.Models.ProductService
+
+@{
+    ViewData["Title"] = "Delete the products";
+}
+<form method="post" asp-controller="Admin" asp-action="DeleteProduct">
+    <div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="productId"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="productId" class="form-control" />
+                        <span asp-validation-for="productId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="productName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="productName" class="form-control" />
+                        <span asp-validation-for="productName" class="text-danger"></span>
+                    </div>
+                </div>
+              
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="productCategory"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="productCategory" class="form-control" />
+                        <span asp-validation-for="productCategory" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                  
+                    <div class="col-4 offset-4">
+                        <input type="submit" class="btn btn-info w-100" value="Delete" />
+                    </div>
+                    @if(ViewBag.Message != null)
+                    {
+                        <a class="nav-link text-black-50 btn-outline-primary font-weight-bolder" style="position: relative; margin:10px;background-color: beige;float: right" asp-controller="Admin" asp-action="GetProductDetails">Get Product Details </a>
+                        <script type="text/javascript">
+                                      window.onload=function(){
+                                          alert("@ViewBag.Message");
+                                      };
+                        </Script>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
