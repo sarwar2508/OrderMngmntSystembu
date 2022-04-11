@@ -103,6 +103,7 @@ namespace OrderMngmntSystem.Controllers
         {
             return View();
         }
+        [HttpPost]
 
         public async Task<ActionResult> AddProduct(ProductService prod)
         {
@@ -112,6 +113,7 @@ namespace OrderMngmntSystem.Controllers
                 if (prod != null)
                 {
                     await _productOperations.AddProduct(prod);
+                    ViewBag.Message = string.Format("Customer Added Successfully");
                     return View(prod);
                 }
 
@@ -121,6 +123,7 @@ namespace OrderMngmntSystem.Controllers
                 _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
 
             }
+           
             return BadRequest();
         }
         public async Task<ActionResult> SearchOrderProducts(int OrderId)
