@@ -1,0 +1,70 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model OrderMngmntSystem.Models.Customer
+
+@{
+    ViewData["Title"] = "Add Customer Details";
+}
+
+<form method="post" asp-controller="Admin" asp-action="AddCustomer">
+    <div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="customerId"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="customerId" class="form-control" />
+                        <span asp-validation-for="customerId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="customerName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="customerName" class="form-control" />
+                        <span asp-validation-for="customerName" class="text-danger"></span>
+                    </div>
+                </div>
+              
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Address"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                </div>
+                 <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="OrderId"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="OrderId" class="form-control" />
+                        <span asp-validation-for="OrderId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                  
+                    <div class="col-4 offset-4">
+                        <input type="submit" class="btn btn-info w-100" value="Add" />
+                    </div>
+                    @if(ViewBag.Message != null)
+                    {
+                        <a class="nav-link text-black-50 btn-outline-primary font-weight-bolder" style="position: relative; margin:10px;background-color: beige;float: right" asp-controller="Admin" asp-action="GetCustomerDetails">Get Customer Details </a>
+                        <script type="text/javascript">
+                                      window.onload=function(){
+                                          alert("@ViewBag.Message");
+                                      };
+                        </Script>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

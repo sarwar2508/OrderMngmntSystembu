@@ -391,7 +391,6 @@ C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\runtimes\w
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\GetProductDetails.cshtml.g.cs
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\Humanizer.dll
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
@@ -440,4 +439,15 @@ C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\runtimes\w
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Customer\AddProduct.cshtml.g.cs
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\AdminPage.cshtml.g.cs
 C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\GetCustomerDetails.cshtml.g.cs
-C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\DeleteProduct.cshtml.g.cs
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Customer\CustomerPage.cshtml.g.cs
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\EditProduct.cshtml.g.cs
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Customer\ProductDetailsList.cshtml.g.cs
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\Azure.Core.dll
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\Azure.Core.Amqp.dll
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\Azure.Messaging.ServiceBus.dll
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\Microsoft.Azure.Amqp.dll
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\bin\Debug\net5.0\System.Memory.Data.dll
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\AddCustomer.cshtml.g.cs
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Customer\EditProduct.cshtml.g.cs
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Customer\DeleteProduct.cshtml.g.cs
+C:\AzurePractice\OrderMngmntSystem\OrderMngmntSystem\obj\Debug\net5.0\Razor\Views\Admin\GetCustomerOrderDetails.cshtml.g.cs

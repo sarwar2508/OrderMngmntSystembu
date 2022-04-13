@@ -4,6 +4,8 @@ using OrderMngmntSystem.Infrastructure;
 using OrderMngmntSystem.Models;
 using System;
 using System.Threading.Tasks;
+using System.Linq;
+
 
 namespace OrderMngmntSystem.Controllers
 {
@@ -99,12 +101,44 @@ namespace OrderMngmntSystem.Controllers
 
         //}
 
+        public IActionResult CustomerPage()
+        {
+            return View();
+        }
+
         public IActionResult AddProduct()
         {
             return View();
         }
-        [HttpPost]
+      
+        public ActionResult DeleteProduct()
+        {
+            return View();
+        }
 
+
+        public async Task<ActionResult> ProductDetailsList()
+        {
+            var products = await _productOperations.EditProduct();
+
+            try
+            {
+                _logger.LogInformation("Product -EditProduct endpoint called");
+
+                if (products == null)
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
+            }
+            return View(products);
+
+
+        }
+        [HttpPost]
         public async Task<ActionResult> AddProduct(ProductService prod)
         {
             try
@@ -125,7 +159,53 @@ namespace OrderMngmntSystem.Controllers
             }
            
             return BadRequest();
-        }  
+        }
+        public async Task<ActionResult> EditProduct()
+        {
+            var products = await _productOperations.EditProduct();
+
+            try
+            {
+                _logger.LogInformation("Product -EditProduct endpoint called");
+
+                if (products == null)
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
+            }
+            return View(products);
+
+
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> DeleteProduct(ProductService product)
+        {
+            try
+            {
+                _logger.LogInformation("Product -DeleteProduct endpoint called");
+                if (product != null)
+                {
+                    await _productOperations.DeleteProductCategory(product);
+                    ViewBag.Message = string.Format("Product Deleted Successfully");
+
+                    return View(product);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
+
+            }
+            return NotFound();
+
+        }
+
+        [HttpPost]
         public async Task<ActionResult> SearchOrderProducts(int OrderId)
         {
             try
@@ -135,7 +215,7 @@ namespace OrderMngmntSystem.Controllers
 
                 if (searchh != null)
                 {
-                    return Ok(searchh);
+                    return View(searchh);
                 }
             }
             catch (Exception ex)
@@ -146,16 +226,16 @@ namespace OrderMngmntSystem.Controllers
             return BadRequest("Not found");
         }
        
-
+        [HttpGet]
         public async Task<ActionResult> GetProductbyId(int ProductId)
         {
             try
             {
-                _logger.LogInformation("Product -DetailsById endpoint called");
+                _logger.LogInformation("Product -GetProductbyId endpoint called");
                 if (ProductId != 0)
                 {
                     var res = await _productOperations.GetProductName(ProductId);
-                    return Ok(res);
+                    return View(res);
                 }
             }
             catch (Exception ex)

@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<OrderMngmntSystem.Models.ProductService>
+
+@{
+    ViewData["Title"] = "EditProduct";
+}
+
+<div>
+    <h2 class="text-primary">Edit Product</h2>
+</div>
+
+<div class="container p-3">
+    <div>
+        <a class="nav-link text-dark btn-primary font-Italic-bold" style="margin: 12px; background-color: lavenderblush;float: right" asp-controller="Admin" asp- asp-action="GetCustomerDetails">Go To Customer Details</a>
+    </div>
+    @if (Model.Count() > 0)
+    {
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    productId
+                </th>
+                <th>
+                    productName
+                </th>
+                <th>
+                    productCategory
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var detail in Model)
+            {
+            <tr>
+                <td>@detail.productId</td>
+                <td>@detail.productName</td>
+                <td>@detail.productCategory</td>
+
+                <td class="text-center">
+                    <div class="w-75 btn-group" role="group">
+                       <a asp-controller="Admin" asp-route-prod="@detail.productId" asp-action="DeleteProduct" class="btn btn-danger mx-1">
+                            <i class="fas fa-edit"></i> Delete
+                        </a>
+                        @*<a asp-controller="Customer" asp-route-prod="@detail.productId" asp-action="AddProduct" class="btn btn-primary mx-3">
+                            <i class="far fa-trash-alt"></i> Add
+                        </a>*@
+                    </div>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    }
+</div>
+

@@ -10,9 +10,11 @@ namespace OrderMngmntSystem.Infrastructure
 {
     public interface IProductOperations
     {
-        Task<IList<ProductService>> GetProductDetails();
+        Task<IList<ProductService>> EditProduct();
 
         Task<IList<Customer>> GetCustomerDetails();
+
+        Task<IList<CustomerOrder>> GetCustomerOrderDetails();
 
         //ProductService GetByCategory(string catg);
 

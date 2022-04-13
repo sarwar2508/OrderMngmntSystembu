@@ -27,31 +27,12 @@ namespace OrderMngmntSystem.Controllers
         {
             return View();
         }
-        public ActionResult DeleteProduct()
+        
+        public IActionResult AddCustomer()
         {
             return View();
         }
-        public async Task<ActionResult> GetProductDetails()
-        {
-            var products = await _productOperations.GetProductDetails();
-
-            try
-            {
-                _logger.LogInformation("Product -GetProductDetails endpoint called");
-
-                if (products == null)
-                {
-                    return NotFound();
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
-            }
-            return View(products);
-
-
-        }  
+       
         public async Task<ActionResult> GetCustomerDetails()
         {
             var customers = await _productOperations.GetCustomerDetails();
@@ -72,30 +53,54 @@ namespace OrderMngmntSystem.Controllers
             return View(customers);
 
 
-        } 
+        }
+
+        public async Task<ActionResult> GetCustomerOrderDetails()
+        {
+            var customers = await _productOperations.GetCustomerOrderDetails();
+
+            try
+            {
+                _logger.LogInformation("Customer -GetCustomerOrderDetails endpoint called");
+
+                if (customers == null)
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
+            }
+            return View(customers);
+
+
+        }
 
         [HttpPost]
-        public async Task<ActionResult> DeleteProduct(ProductService product)
+        public async Task<ActionResult> AddCustomer(Customer customer)
         {
             try
             {
-                _logger.LogInformation("Product -DeleteProduct endpoint called");
-                if (product != null)
+                _logger.LogInformation("Product -AddCustomer endpoint called");
+                if (customer != null)
                 {
-                    await _productOperations.DeleteProductCategory(product);
-                    ViewBag.Message = string.Format("Product Deleted Successfully");
-                    
-                    return View(product);
+                    await _productOperations.AddCustomer(customer);
+                    ViewBag.Message = string.Format("Customer Added Successfully");
+                    return View(customer);
                 }
+
             }
             catch (Exception ex)
             {
                 _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
 
             }
-            return NotFound();
 
+            return BadRequest();
         }
+
+       
        
 
         //public async Task<ActionResult> AddCustomer(Customer customer)

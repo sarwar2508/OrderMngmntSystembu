@@ -29,7 +29,13 @@ namespace OrderMngmntSystem.Infrastructure
         //    return _productContext.Find<ProductService>(catg);
         //}
 
-        public async Task<IList<ProductService>> GetProductDetails()
+        public async Task<IList<CustomerOrder>> GetCustomerOrderDetails()
+        {
+            await Task.Delay(1000);
+            return _productContext.Set<CustomerOrder>().ToList();
+        }
+
+        public async Task<IList<ProductService>> EditProduct()
         {
             await Task.Delay(1000);
             return _productContext.Set<ProductService>().ToList();
