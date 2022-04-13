@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\AzurePractice\\OrderMngmntSystem\\OrderMngmntSystem\\OrderMngmntSystem.csproj": {}
+    "C:\\Users\\hp\\Source\\Repos\\OrderMngmntSystembu\\OrderMngmntSystem\\OrderMngmntSystem.csproj": {}
   },
   "projects": {
-    "C:\\AzurePractice\\OrderMngmntSystem\\OrderMngmntSystem\\OrderMngmntSystem.csproj": {
+    "C:\\Users\\hp\\Source\\Repos\\OrderMngmntSystembu\\OrderMngmntSystem\\OrderMngmntSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\AzurePractice\\OrderMngmntSystem\\OrderMngmntSystem\\OrderMngmntSystem.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Source\\Repos\\OrderMngmntSystembu\\OrderMngmntSystem\\OrderMngmntSystem.csproj",
         "projectName": "OrderMngmntSystem",
-        "projectPath": "C:\\AzurePractice\\OrderMngmntSystem\\OrderMngmntSystem\\OrderMngmntSystem.csproj",
-        "packagesPath": "C:\\Users\\Sarwar Alam\\.nuget\\packages\\",
-        "outputPath": "C:\\AzurePractice\\OrderMngmntSystem\\OrderMngmntSystem\\obj\\",
+        "projectPath": "C:\\Users\\hp\\Source\\Repos\\OrderMngmntSystembu\\OrderMngmntSystem\\OrderMngmntSystem.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Source\\Repos\\OrderMngmntSystembu\\OrderMngmntSystem\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sarwar Alam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
