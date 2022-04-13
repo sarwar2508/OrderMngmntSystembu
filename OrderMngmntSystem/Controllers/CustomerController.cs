@@ -15,7 +15,15 @@ namespace OrderMngmntSystem.Controllers
     {
         private readonly IProductOperations _productOperations;
         private readonly ILogger<CustomerController> _logger;
+        private readonly SendServiceBusMessage _sendServiceBusMessage;
 
+        public CustomerController(IProductOperations appContext, ILogger<CustomerController> Logger,
+            SendServiceBusMessage sendServiceBusMessage)
+        {
+            _logger = Logger;
+            _productOperations = appContext;
+            _sendServiceBusMessage = sendServiceBusMessage;
+        }
         public CustomerController(IProductOperations productOperations, ILogger<CustomerController> logger)
         {
 

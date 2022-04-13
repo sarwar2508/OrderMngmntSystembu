@@ -28,7 +28,8 @@ namespace OrderMngmntSystem
             services.AddControllersWithViews();
             services.AddDbContext<OrderMngmntDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("ConStr")));
             services.AddScoped<IProductOperations, ProductOperations>();
-            
+            services.AddScoped<SendServiceBusMessage>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
