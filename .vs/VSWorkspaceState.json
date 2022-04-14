@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\OrderMngmntSystem",
-    "\\OrderMngmntSystem\\Controllers"
+    "\\OrderMngmntSystem\\Controllers",
+    "\\OrderMngmntSystem\\Infrastructure",
+    "\\OrderMngmntSystem\\Models"
   ],
-  "SelectedNode": "\\OrderMngmntSystem\\Controllers\\CustomerController.cs",
+  "SelectedNode": "\\OrderMngmntSystem.sln",
   "PreviewInSolutionExplorer": false
 }

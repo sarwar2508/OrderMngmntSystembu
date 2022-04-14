@@ -17,20 +17,21 @@ namespace OrderMngmntSystem.Controllers
         private readonly ILogger<CustomerController> _logger;
         private readonly SendServiceBusMessage _sendServiceBusMessage;
 
-        public CustomerController(IProductOperations appContext, ILogger<CustomerController> Logger,
+        public CustomerController(IProductOperations productOperations, ILogger<CustomerController> Logger,
             SendServiceBusMessage sendServiceBusMessage)
         {
             _logger = Logger;
-            _productOperations = appContext;
+            _productOperations = productOperations;
+            _logger.LogInformation("Customer Called");
             _sendServiceBusMessage = sendServiceBusMessage;
         }
-        public CustomerController(IProductOperations productOperations, ILogger<CustomerController> logger)
-        {
+        //public CustomerController(IProductOperations productOperations, ILogger<CustomerController> logger)
+        //{
 
-            _logger = logger;
-            _logger.LogInformation("Customer Called");
-            _productOperations = productOperations;
-        }
+        //    _logger = logger;
+        //    _logger.LogInformation("Customer Called");
+        //    _productOperations = productOperations;
+        //}
 
 
         //public async Task<ActionResult> GetProductDetails()
