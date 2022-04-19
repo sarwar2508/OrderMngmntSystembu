@@ -904,3 +904,4 @@ C:\Users\hp\Source\Repos\OrderMngmntSystembu\OrderMngmntSystem\obj\Debug\net5.0\
 C:\Users\hp\Source\Repos\OrderMngmntSystembu\OrderMngmntSystem\obj\Debug\net5.0\ref\OrderMngmntSystem.dll
 C:\Users\hp\Source\Repos\OrderMngmntSystembu\OrderMngmntSystem\obj\Debug\net5.0\OrderMngmntSystem.pdb
 C:\Users\hp\Source\Repos\OrderMngmntSystembu\OrderMngmntSystem\obj\Debug\net5.0\OrderMngmntSystem.genruntimeconfig.cache
+C:\Users\hp\Source\Repos\OrderMngmntSystembu\OrderMngmntSystem\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
