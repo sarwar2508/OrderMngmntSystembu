@@ -57,13 +57,13 @@ namespace OrderMngmntSystem.Controllers
 
         public async Task<ActionResult> GetCustomerOrderDetails()
         {
-            var customers = await _productOperations.GetCustomerOrderDetails();
+            var customer = await _productOperations.GetCustomerOrderDetails();
 
             try
             {
                 _logger.LogInformation("Customer -GetCustomerOrderDetails endpoint called");
 
-                if (customers == null)
+                if (customer == null)
                 {
                     return NotFound();
                 }
@@ -72,7 +72,7 @@ namespace OrderMngmntSystem.Controllers
             {
                 _logger.LogError("Exception Occured -Exception detail", ex.InnerException);
             }
-            return View(customers);
+            return View(customer);
 
 
         }

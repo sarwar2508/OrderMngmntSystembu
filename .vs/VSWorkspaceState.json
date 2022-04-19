@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
     "",
+    "\\OrderMngmntSystem",
     "\\OrderMngmntSystem\\Controllers",
     "\\OrderMngmntSystem\\Infrastructure",
     "\\OrderMngmntSystem\\Models"

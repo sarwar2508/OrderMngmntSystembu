@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.32407.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderMngmntSystem", "OrderMngmntSystem\OrderMngmntSystem.csproj", "{EA6C5712-A612-4493-A390-D07D27B56ADA}"
 EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "OMS.ServiceBus.Queue", "SMS.ServiceBus.Queue\OMS.ServiceBus.Queue.deployproj", "{4647BC11-E3C4-4A83-80E8-48AB6A3AC16E}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "OMS.Workflow.SendEmailAlert", "SMS.Workflow.SendEmailAlert\OMS.Workflow.SendEmailAlert.deployproj", "{5E397147-2CCE-4BC8-9520-D8D732FF6854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMS.ValidateLogin", "OMS.ValidateLogin\OMS.ValidateLogin.csproj", "{4B7D0F18-5A5D-4C93-AFAA-487C43750CBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{EA6C5712-A612-4493-A390-D07D27B56ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA6C5712-A612-4493-A390-D07D27B56ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA6C5712-A612-4493-A390-D07D27B56ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4647BC11-E3C4-4A83-80E8-48AB6A3AC16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4647BC11-E3C4-4A83-80E8-48AB6A3AC16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4647BC11-E3C4-4A83-80E8-48AB6A3AC16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4647BC11-E3C4-4A83-80E8-48AB6A3AC16E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E397147-2CCE-4BC8-9520-D8D732FF6854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E397147-2CCE-4BC8-9520-D8D732FF6854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E397147-2CCE-4BC8-9520-D8D732FF6854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E397147-2CCE-4BC8-9520-D8D732FF6854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B7D0F18-5A5D-4C93-AFAA-487C43750CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B7D0F18-5A5D-4C93-AFAA-487C43750CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B7D0F18-5A5D-4C93-AFAA-487C43750CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B7D0F18-5A5D-4C93-AFAA-487C43750CBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
